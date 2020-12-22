@@ -7,7 +7,7 @@ import urlModel from './models/urls';
 const app = express();
 dotenv.config();
 
-mongoose.connect('mongodb://localhost/shorturl', {
+mongoose.connect(process.env.DATABASE_URI, {
     useNewUrlParser: true, useUnifiedTopology: true
 }).then(() => console.log("Database connected")).catch(() => console.log("DB CONNECTION ERORR"));
 
