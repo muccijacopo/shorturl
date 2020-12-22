@@ -9,7 +9,7 @@ dotenv.config();
 
 mongoose.connect('mongodb://localhost/shorturl', {
     useNewUrlParser: true, useUnifiedTopology: true
-})
+}).then(() => console.log("Database connected")).catch(() => console.log("DB CONNECTION ERORR"));
 
 
 app.set("view engine", 'ejs');
@@ -62,4 +62,4 @@ app.post("/shortUrls", async (req, res) => {
     res.redirect("/")
 })
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, () => console.log("Server started"))
