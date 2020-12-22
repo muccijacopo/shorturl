@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
     "dev": "tsnd --respawn --transpile-only app.ts",
-    "start": "node dist/app.js"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
